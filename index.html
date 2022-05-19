@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Home - Bilal Web</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark position-fixed w-100">
+	<div class="container">
+		<a class="navbar-brand" href="#">Logo</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="#home">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#product">Our Product</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#contact">Contact Us</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<section class="container py-5" id="home">
+    <div class="row align-items-center">
+    	<div class="col-md-6">
+    		<img src="img/3.jpeg" class="w-100"/>
+    	</div>
+    	<div class="col-md-6">
+    		<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+    	</div>
+    </div>
+</section>
+
+<section class="container py-5" id="product">
+    <div class="row align-items-center">
+    	<div class="col-md-12">
+    		<div class="grid">
+	    		<!-- MIDDLE ROW -->	
+				<figure class="effect-slideleft">
+					<img src="img/1.jpg" class="w-100"/>
+					<figcaption class="p-5">
+						<h2>Car</h2>
+						<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+					</figcaption>			
+				</figure>
+			</div>
+    	</div>
+    	<div class="col-md-12">
+    		<div class="grid">
+	    		<!-- MIDDLE ROW -->	
+				<figure class="effect-slideleft">
+					<img src="img/2.jpeg" class="w-100"/>
+					<figcaption class="p-5">
+						<h2>Car</h2>
+						<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+					</figcaption>			
+				</figure>
+			</div>
+    	</div>
+    </div>
+</section>
+
+<section class="container py-5" id="contact">
+	<div class="row">
+		<div class="col-md-4">
+			<div class="card text-center pt-3">
+				<img src="img/github.png" class="w-50 card-img-top m-auto" alt="..."> 
+				<div class="card-body mt-2">
+					<h3>Github</h3>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="card text-center pt-3">
+				<img src="img/linkedin.png" class="w-50 card-img-top m-auto" alt="..."> 
+				<div class="card-body mt-2">
+					<h3>Linkedin</h3>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="card text-center pt-3">
+				<img src="img/facebook.png" class="w-50 card-img-top m-auto" alt="..."> 
+				<div class="card-body mt-2">
+					<h3>Facebook</h3>
+				</div>
+			</div>
+		</div>
+	</div>	
+</section>
+
+<section class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<!-- <form action="#" name="commentForm"> -->
+				<div class="mb-3">
+					<label class="form-label">Email</label>
+					<input type="text" class="form-control" name="email" placeholder="Email">
+				</div>
+				<div class="mb-3">
+					<label class="form-label">Comment</label>
+					<textarea class="form-control" name="comment" rows="5" id="userinput" placeholder="Your Comment...."></textarea>
+				</div>
+				<div class="mb-3">
+					<input type="submit" value="Submit" class="btn-primary" id ="submitBtn">
+				</div>
+			<!-- </form> -->
+		</div>
+		<div class="col-md-12">
+			<p id="showComment"> 
+				
+			</p>
+		</div>
+	</div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script type="text/javascript">
+	var button = document.getElementById("submitBtn");
+	var input = document.getElementById("userinput");
+ 	var ul = document.querySelector("ul");
+	
+	button.addEventListener ("click", function() {
+		var commentData= userinput.value;
+		// console.log('data: ' + commentData);
+		document.getElementById('showComment').innerHTML = commentData;
+	});
+
+</script>
+
+</body>
+</html>
